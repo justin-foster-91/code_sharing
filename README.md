@@ -7,8 +7,8 @@
 * `docker-compose -f stack.yml build`
 * `docker-compose -f stack.yml up`
 * Check localhost:8000 in your browser. You should see "Cannot GET".
-* Check localhost:3000 in your browser. You should see the create an account page.
-* TODO: Add info about Postman requests/link to our wiki from here.
+* Check localhost:80 in your browser. You should see the create an account page.
+* It may take several minutes for the database to spin up.
 
 # Running Tests
 * Run `docker ps` to get your container name.
