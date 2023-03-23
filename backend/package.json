@@ -1,0 +1,52 @@
+{
+  "name": "instance-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require test/setup.js",
+    "dev": "nodemon src/server.js",
+    "migrate": "postgrator --config postgrator-config.js",
+    "migrate:test": "env NODE_ENV=test npm run migrate",
+    "migrate:production": "heroku run npm run migrate",
+    "start": "node src/server.js",
+    "predeploy": "npm audit",
+    "deploy": "git push heroku main",
+    "postdeploy": "npm run migrate:production",
+    "add:download": "node src/server-scripts/add-download.js",
+    "delete:download": "node src/server-scripts/delete-download.js",
+    "edit:download": "node src/server-scripts/edit-download.js",
+    "print:downloads": "node src/server-scripts/print-downloads.js",
+    "add:badge": "node src/server-scripts/add-badge.js",
+    "delete:badge": "node src/server-scripts/delete-badge.js",
+    "edit:badge": "node src/server-scripts/edit-badge.js",
+    "print:badges": "node src/server-scripts/print-badges.js"
+  },
+  "keywords": [],
+  "engines": {
+    "node": "12.9.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "agora-access-token": "^2.0.4",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.17",
+    "morgan": "^1.10.0",
+    "pg": "^8.5.1",
+    "postgrator-cli": "^4.0.0",
+    "prompt-sync": "^4.2.0",
+    "socket.io": "^4.5.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.1",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  }
+}

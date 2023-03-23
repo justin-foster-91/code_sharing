@@ -1,0 +1,50 @@
+# Use postgres/example user/password credentials
+version: "3.1"
+
+networks:
+  dev-codespells-network:
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+    networks:
+      - dev-codespells-network
+
+  backend:
+    image: codespells-backend
+    build: ./backend
+    restart: always
+    ports:
+      - 8000:8000
+      - 3001:3001
+    depends_on:
+      - "db"
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+    command: "bash ./scripts/setup-and-run.sh"
+    container_name: backend
+    env_file:
+      - ./backend/.env
+    networks:
+      - dev-codespells-network
+
+  frontend:
+      image: codespells-frontend
+      build: ./frontend
+      restart: always
+      ports:
+        - 80:3000
+      depends_on: 
+        - "backend"
+      volumes:
+        - ./frontend:/usr/src/app
+        - /usr/src/app/node_modules
+      container_name: frontend
+      env_file:
+        - ./frontend/.env
+      networks: 
+        - dev-codespells-network
