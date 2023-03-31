@@ -31,7 +31,7 @@ export function PublicListItems(props) {
 
   return (
   <>
-    <div>
+    <div style={{marginTop: '5px'}}>
 
     {/* <ListItem button onClick={() => handleClickButton('/instances/5/views/video-call')} 
       className={path === '/video-call' ? classes.listIcon : ''}>
