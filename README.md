@@ -1,9 +1,9 @@
-# backendboiler
+# code_sharing app
 
 # Installation
 * Use WSL, not windows
-* `git clone git@github.com:thoughtstem/backendboiler.git`
-* `cd backendboiler`
+* `git clone git@github.com:justin-foster-91/code_sharing.git`
+* `cd code_sharing`
 * `docker-compose -f stack.yml build`
 * `docker-compose -f stack.yml up`
 * Check localhost:8000 in your browser. You should see "Cannot GET".

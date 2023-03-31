@@ -497,7 +497,7 @@ export default function InstanceDetails(props) {
 
           <p></p>
 
-        <div className={classes.iconRow}>
+        {/* <div className={classes.iconRow}>
           {instance.lock || !userOwnsInstance ?
             <TextField className={classes.collaboratorLine}
               placeholder="Collaborators"
@@ -543,7 +543,7 @@ export default function InstanceDetails(props) {
               <FormControlLabel value="ReadWrite" control={<Radio size="small"/>} label="Read/Write" />
             </RadioGroup>
           </FormControl>
-        </div>
+        </div> */}
 
         {instance.locked || !userOwnsInstance ? (
             <div className={classes.icon}>

@@ -63,6 +63,9 @@ const LoginForm = (props) => {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
+          <p style={{margin: 0}}>Demo User</p>
+          <p style={{margin: 0}}>Username: dunder</p>
+          <p style={{margin: 0}}>Password: password</p>
           <form className={classes.loginFormForm} noValidate>
             <TextField
               variant="outlined"

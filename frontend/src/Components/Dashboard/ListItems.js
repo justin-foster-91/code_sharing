@@ -33,13 +33,13 @@ export function PublicListItems(props) {
   <>
     <div>
 
-    <ListItem button onClick={() => handleClickButton('/instances/5/views/video-call')} 
+    {/* <ListItem button onClick={() => handleClickButton('/instances/5/views/video-call')} 
       className={path === '/video-call' ? classes.listIcon : ''}>
       <ListItemIcon>
         <CodeIcon />
       </ListItemIcon>
       <ListItemText primary="Instance VideoChat" />
-    </ListItem>
+    </ListItem> */}
 
     <ListItem button onClick={() => handleClickButton('/instances')} 
       className={path === '/instances' ? classes.listIcon : ''}>
@@ -49,13 +49,13 @@ export function PublicListItems(props) {
       <ListItemText primary="My Instances" />
     </ListItem>
 
-    <ListItem button onClick={() => handleClickButton('/friends')}
+    {/* <ListItem button onClick={() => handleClickButton('/friends')}
       className={path === '/friends' ? classes.listIcon : ''}>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
       <ListItemText primary="Friends" />
-    </ListItem>
+    </ListItem> */}
 
     <ListItem button onClick={() => handleClickButton('/gallery')}
       className={path === '/gallery' ? classes.listIcon : ''}>

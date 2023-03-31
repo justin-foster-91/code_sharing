@@ -22,7 +22,11 @@ VALUES
   (1, 'Deleted & Public', 'Test', '(displayln "Hello")', true, true, false),
   (1, 'Deleted, not public', 'Test', '(displayln "Hello")', false, true, false),
   (1, 'Neither deleted nor public', 'Test', '(displayln "Hello")', false, false, false),
-  (1, 'Safely Locked!', 'This instance is set as locked by default', '(displayln "Go Away")', true, false, true);
+  (1, 'Safely Locked!', 'This instance is set as locked by default', '(displayln "Go Away")', true, false, true),
+  (2, 'User 2 Code Snippit', 'Demo spell from a non-default user', '(displayln "Hello")', true, false, false),
+  (2, 'User 2 private code', 'This should be hidden from other users', '(displayln "Hello")', false, false, false),
+  (3, 'Wind Blast', 'Shoot a blast of wind', '(displayln "Hello")', true, false, false),
+  (3, 'Frost Fall', 'Makes it snow', '(displayln "Hello")', true, false, false);
 
 INSERT INTO follows (user_id, follower_id)
 VALUES
